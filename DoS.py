@@ -3,7 +3,7 @@
 
 import os, sys
 import requests, urllib3
-import socket, socks, threading, random, re, os
+import socket, socks5, threading, random, re, os
 import sys, glob, time, requests, ssl, webbrowser
 import bz2, datetime, wget, json, cfscrape, urllib3
 from time import sleep
